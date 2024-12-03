@@ -20,6 +20,11 @@ class Car
     public const double StandardTankCapacityLiters = 50.0;
     public const double StandardMaxSpeedKmH = 180.0;
     public readonly string VehicleType = "Car";
+    public static List<string> SupportedBrands{get;} = new() {"Toyota", "Ford", "BMW", "Audi", "Fiat"};
+
+    public static int TotalCarsProduced{get; private set;}
+
+    public int Speed { get; private set; }
 
     public Car()
     {
@@ -27,6 +32,7 @@ class Car
         Model = "Unknown";
         Year = 2020;
         VehicleType = "Car";
+        TotalCarsProduced++;
     }
 
     public Car(string mk, string mdl, int yr = 2020, string vehicleType = "Car")
@@ -35,6 +41,7 @@ class Car
         Model = mdl;
         Year = yr;
         VehicleType = vehicleType;
+        TotalCarsProduced++;
     }
     // public Car(string make, string model){
     //     Make = make;
@@ -52,6 +59,17 @@ class Car
     public override string ToString()
     {
         return $"Starting {make} {Model} {Year} {VehicleType}";
+    }
+
+    public void Accelerate(int amount){
+        Speed += amount; 
+    }
+
+    public static List<string> GetSupportedBrandList() {
+        return SupportedBrands;
+    }
+    public static string GetSupportedBrandListString() {
+        return string.Join(", ", SupportedBrands);
     }
 }
 

@@ -22,6 +22,13 @@ class Program
         Car newCar2 = new (mk: "JEEP", mdl: "Chaser", yr: 2024, vehicleType: "4X4");
         newCar2.Start();
         Console.WriteLine(newCar2);
+        Console.WriteLine("+++++++++++++++++++++++++++++");
+        Console.WriteLine($"Total card produced {Car.TotalCarsProduced}");
+        // Console.WriteLine($"Available marks {string.Join(", ", Car.SupportedBrands)}");
+        Console.WriteLine($"Available marks {Car.GetSupportedBrandListString()}");
+        newCar2.Accelerate(10);
+        Console.WriteLine($"Current speed {newCar2.Speed}");
+
 
         // Car newCar2 = new Car(make: "FORD", model: "Fusion", year: 2021);
         // newCar.Start();
