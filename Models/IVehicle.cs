@@ -4,6 +4,7 @@ interface IVehicle
     public const double StandardTankCapacityLiters = 50.0;
     public const double StandardMaxSpeedKmH = 180.0;
     void Start();
+    void Drive();
     void Accelerate(int amount);
     void Brake();
     string VehicleToString(){

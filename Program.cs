@@ -1,4 +1,4 @@
-﻿namespace OOPCar;
+﻿namespace OOP_car;
 using Models;
 
 class Program
@@ -48,21 +48,31 @@ class Program
 
         // Console.WriteLine($"We have created a car {car.Make} {car.Model} {car.Year}");
         // Console.WriteLine($"We have created a car {fiat500L.Make} {fiat500L.Model} {fiat500L.Year}");
-        Vehicle myVehicle = new() {
+        Car myVehicle = new() {
             Model = "500c", Brand = "FIAT", Version = "500C HYBRID"
         };
 
         Console.WriteLine(myVehicle.GetHashCode());
         myVehicle.Start();
+        myVehicle.Drive();
         myVehicle.Accelerate(10);
         Console.WriteLine($"Speed is {myVehicle.Speed}");
 
-        IVehicle myVehicle2 = new Vehicle() {
+        IVehicle myVehicle2 = new Car() {
             Model = "500c", Brand = "FIAT", Version = "500C HYBRID"
         };
 
         Console.WriteLine($"Mesaage fromt myVehicle {myVehicle.VehicleToString()}");
         Console.WriteLine($"Mesaage fromt myVehicle2 {myVehicle2.VehicleToString()}");
+
+        AutonomousCar myVehicle3 = new () {
+            Model = "GT500", Brand = "MUSTANG", Version = "SHELBY"
+        };
+        Console.WriteLine(myVehicle3.GetHashCode());
+        myVehicle3.AutoStart();
+        myVehicle3.Drive();
+        myVehicle3.Accelerate(10);
+        Console.WriteLine($"Speed is {myVehicle3.Speed}");
     }
 }
 
