@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OOP-car")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+073f85a29251fe6bfea7300b24788d0b5017255a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d52c37e2d94c7a10324a01d8c0d97a5defcf64b")]
 [assembly: System.Reflection.AssemblyProductAttribute("OOP-car")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OOP-car")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
